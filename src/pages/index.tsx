@@ -6,7 +6,7 @@ import { HomeContainer } from '../styles/HomeStyles';
 export default function Home() {
   return (
     <HomeContainer>
-        {/* <Header /> */}
+        <Header />
 
         <main className="container"> 
           <HomeHero />
