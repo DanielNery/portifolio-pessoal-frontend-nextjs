@@ -21,14 +21,15 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module'
   },
-  plugins: ['react', '@typescript-eslint', 'prettier'],
+  plugins: ['next', 'react', '@typescript-eslint', 'prettier'],
   rules: {
     'react/jsx-props-no-spreading': 'off',
     'react/react-in-jsx-scope': 'off',
     'prettier/prettier': 'error',
     'space-before-function-paren': 'off',
     'react/prop-types': 'off',
-    "react/no-unescaped-entities": "off",
-    "@next/next/no-page-custom-font": "off"
+    'import/prefer-default-export': 'off',
+    'react/require-default-props': 'off',
+    'jsx-a11y/anchor-is-valid': 'off'
   }
 };
