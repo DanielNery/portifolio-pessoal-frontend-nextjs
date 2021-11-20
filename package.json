@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@netlify/plugin-nextjs": "^3.9.2",
     "next": "10.2.0",
     "next-images": "^1.7.0",
     "polished": "^4.1.3",
