@@ -1,3 +1,4 @@
+import Experiencias from "../components/Experiencias";
 import Header from "../components/Header";
 import HomeHero from "../components/HomeHero";
 import { HomeContainer } from '../styles/HomeStyles';
@@ -5,10 +6,11 @@ import { HomeContainer } from '../styles/HomeStyles';
 export default function Home() {
   return (
     <HomeContainer>
-        <Header />
+        {/* <Header /> */}
 
         <main className="container"> 
           <HomeHero />
+          <Experiencias />
         </main>
 
     </HomeContainer>

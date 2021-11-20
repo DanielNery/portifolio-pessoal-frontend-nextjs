@@ -41,6 +41,7 @@ export default createGlobalStyle`
     margin: 0 auto;
     max-width: 85rem;
     padding: 0 1rem;
+    
     @media(max-width:1450px) {
       max-width: 70rem;
     }

@@ -20,7 +20,7 @@ export const Container = styled.section`
     }
 
 
-    @media(mex-width: 1450px) {
+    @media(max-width: 1450px) {
         > img {
             width: 30rem;
         }
@@ -30,16 +30,16 @@ export const Container = styled.section`
         }
     }
 
-    @media(mex-width: 1000px) {
+    @media(max-width: 1000px) {
         > img {
             width: 22rem;
         }
-
     
     }
 
-    @media(mex-width: 700px) {
+    @media(max-width: 700px) {
         flex-direction: column-reverse;
+
         > div {
             width: 100%;
         }
@@ -63,7 +63,7 @@ export const TextContainer = styled.section`
         color: ${({theme}) => theme.secondary};
     }
 
-    @media(mex-width: 1450px) {
+    @media(max-width: 1450px) {
         h1 {
             font-size: 5rem;          
         }
@@ -73,7 +73,7 @@ export const TextContainer = styled.section`
         }
     }
 
-    @media(mex-width: 1000px) {
+    @media(max-width: 1000px) {
         h1 {
             font-size: 3rem;          
         }
@@ -83,7 +83,6 @@ export const TextContainer = styled.section`
         }
     }
 `;
-
 
 export const InfosContainer = styled.section`
 
@@ -105,14 +104,14 @@ export const CodeItem = styled.pre`
     trasition: 1s;
 
 
-    @media(max=width: 1450px){
+    @media(max-width: 1450px){
         width: 18rem;
         padding: 1.5rem;
         font-size: 0.8rem;
 
     }
 
-    @media(max=width: 1000px){
+    @media(max-width: 1000px){
         width: 100%;
     }
 
