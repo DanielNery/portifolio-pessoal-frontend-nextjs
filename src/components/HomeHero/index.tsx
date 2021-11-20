@@ -5,7 +5,7 @@ import picture from '../../assets/perfil.png';
 function HomeHero() {
   return (
     <Container>
-      <img src={picture} alt="minha foto" />
+      {/* <img src={picture} alt="minha foto" /> */}
       <div>
         <TextContainer>
           <h1>Olá</h1>
