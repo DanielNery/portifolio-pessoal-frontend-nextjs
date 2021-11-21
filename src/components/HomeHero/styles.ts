@@ -9,7 +9,7 @@ export const Container = styled.section`
     margin-top: 5rem;
 
 
-    > img {
+    > .perfil {
         width: 40rem;
         flex: 1;
 
@@ -21,7 +21,7 @@ export const Container = styled.section`
 
 
     @media(max-width: 1450px) {
-        > img {
+        > .perfil {
             width: 30rem;
         }
 
@@ -31,7 +31,7 @@ export const Container = styled.section`
     }
 
     @media(max-width: 1000px) {
-        > img {
+        > .perfil {
             width: 22rem;
         }
     

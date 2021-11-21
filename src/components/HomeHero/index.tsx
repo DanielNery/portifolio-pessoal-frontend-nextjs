@@ -1,13 +1,12 @@
 
 import { Container, TextContainer, InfosContainer, CodeItem } from './styles';
-import picture from '../../../public/perfil.png';
 import Image from 'next/image'
 
 function HomeHero() {
   
   return (
     <Container>
-      <Image src="/perfil.png" alt="me" width="500" height="500" />
+      <Image src="/perfil.png" alt="me" width="500" height="500" className="perfil" />
       <div>
         <TextContainer>
           <h1>Olá</h1>

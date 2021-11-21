@@ -7,16 +7,23 @@ interface NavLinkProps {
 
 export const Container = styled.header`
     width: 100%;
+    height: auto;
+    padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 4rem;
     border-bottom: 1px solid ${({ theme }) => theme.backgroundLight};
     
     ul {
         display: flex;
         gap: 2rem;
         align-items: center;
+    }
+
+    @media(max-width: 700px) {
+        ul {
+            flex-direction: column;
+        }
     }
 `;
 
