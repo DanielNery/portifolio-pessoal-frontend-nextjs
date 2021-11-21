@@ -11,6 +11,7 @@ export const Container = styled.section`
         align-items: center;
         justify-content: center;
         gap: 8rem;
+        overflow-x: auto;
 
         @media(max-width: 1000px){
             gap: 5rem;
@@ -21,7 +22,12 @@ export const Container = styled.section`
             flex-wrap: wrap;
             margin-top: 5rem;
         }
+
+        &::-webkit-scrollbar{
+            width: 0;
+        }
     }
+
 
 
 `;

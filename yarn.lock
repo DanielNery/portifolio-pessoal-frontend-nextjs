@@ -1470,6 +1470,11 @@
   "resolved" "https://registry.npmjs.org/commondir/-/commondir-1.0.1.tgz"
   "version" "1.0.1"
 
+"compute-scroll-into-view@^1.0.17":
+  "integrity" "sha512-j4dx+Fb0URmzbwwMUrhqWM2BEWHdFGx+qZ9qqASHRPqvTYdqvWnHg0H1hIbcyLnvgnoNAVMlwkepyqM3DaIFUg=="
+  "resolved" "https://registry.npmjs.org/compute-scroll-into-view/-/compute-scroll-into-view-1.0.17.tgz"
+  "version" "1.0.17"
+
 "concat-map@0.0.1":
   "integrity" "sha1-2Klr13/Wjfd5OnMDajug1UBdR3s="
   "resolved" "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz"
@@ -4209,7 +4214,7 @@
     "minimist" "^1.2.0"
     "strip-json-comments" "~2.0.1"
 
-"react-dom@^17.0.2", "react-dom@^17.0.2 || ^18.0.0", "react-dom@>= 16.8.0", "react-dom@>=16", "react-dom@17.0.2":
+"react-dom@^17.0.2", "react-dom@^17.0.2 || ^18.0.0", "react-dom@>= 16.8.0", "react-dom@>=16", "react-dom@>=16.8", "react-dom@17.0.2":
   "integrity" "sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-17.0.2.tgz"
   "version" "17.0.2"
@@ -4217,6 +4222,13 @@
     "loose-envify" "^1.1.0"
     "object-assign" "^4.1.1"
     "scheduler" "^0.20.2"
+
+"react-horizontal-scrolling-menu@^2.6.0":
+  "integrity" "sha512-bZUiZ+NTDJSwbylAHqfTUt+KFzi0fyhOcvLXdm2HPGiunycJK5X6YWu41tgntR7CvAzPIgbKzxIOG1DaxjH/aA=="
+  "resolved" "https://registry.npmjs.org/react-horizontal-scrolling-menu/-/react-horizontal-scrolling-menu-2.6.0.tgz"
+  "version" "2.6.0"
+  dependencies:
+    "smooth-scroll-into-view-if-needed" "^1.1.32"
 
 "react-hot-toast@^2.1.1":
   "integrity" "sha512-Odrp4wue0fHh0pOfZt5H+9nWCMtqs3wdlFSzZPp7qsxfzmbE26QmGWIh6hG43CukiPeOjA8WQhBJU8JwtWvWbQ=="
@@ -4250,7 +4262,7 @@
   "resolved" "https://registry.npmjs.org/react-refresh/-/react-refresh-0.8.3.tgz"
   "version" "0.8.3"
 
-"react@*", "react@^16.0.0 || ^17.0.0", "react@^16.8.0 || ^17.0.0", "react@^17.0.2", "react@^17.0.2 || ^18.0.0", "react@>= 16.8.0", "react@>= 16.8.0 || 17.x.x || 18.x.x", "react@>=16", "react@17.0.2":
+"react@*", "react@^16.0.0 || ^17.0.0", "react@^16.8.0 || ^17.0.0", "react@^17.0.2", "react@^17.0.2 || ^18.0.0", "react@>= 16.8.0", "react@>= 16.8.0 || 17.x.x || 18.x.x", "react@>=16", "react@>=16.8", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"
@@ -4441,6 +4453,13 @@
     "ajv" "^6.12.5"
     "ajv-keywords" "^3.5.2"
 
+"scroll-into-view-if-needed@^2.2.28":
+  "integrity" "sha512-8LuxJSuFVc92+0AdNv4QOxRL4Abeo1DgLnGNkn1XlaujPH/3cCFz3QI60r2VNu4obJJROzgnIUw5TKQkZvZI1w=="
+  "resolved" "https://registry.npmjs.org/scroll-into-view-if-needed/-/scroll-into-view-if-needed-2.2.28.tgz"
+  "version" "2.2.28"
+  dependencies:
+    "compute-scroll-into-view" "^1.0.17"
+
 "selfsigned@^1.10.8":
   "integrity" "sha512-aVmbPOfViZqOZPgRBT0+3u4yZFHpmnIghLMlAcb5/xhp5ZtB/RVnKhz5vl2M32CLXAqR4kha9zfhNg0Lf/sxKA=="
   "resolved" "https://registry.npmjs.org/selfsigned/-/selfsigned-1.10.11.tgz"
@@ -4603,6 +4622,13 @@
     "ansi-styles" "^4.0.0"
     "astral-regex" "^2.0.0"
     "is-fullwidth-code-point" "^3.0.0"
+
+"smooth-scroll-into-view-if-needed@^1.1.32":
+  "integrity" "sha512-1/Ui1kD/9U4E6B6gYvJ6qhEiZPHMT9ZHi/OKJVEiCFhmcMqPm7y4G15pIl/NhuPTkDF/u57eEOK4Frh4721V/w=="
+  "resolved" "https://registry.npmjs.org/smooth-scroll-into-view-if-needed/-/smooth-scroll-into-view-if-needed-1.1.32.tgz"
+  "version" "1.1.32"
+  dependencies:
+    "scroll-into-view-if-needed" "^2.2.28"
 
 "source-map-support@^0.5.17", "source-map-support@~0.5.20":
   "integrity" "sha512-uBHU3L3czsIyYXKX88fdrGovxdSCoTGDRZ6SYXtSRxLZUzHg5P/66Ht6uoUlHu9EZod+inXhKo3qQgwXUT/y1w=="
