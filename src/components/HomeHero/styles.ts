@@ -10,7 +10,7 @@ export const Container = styled.section`
 
 
     > .perfil {
-        width: 40rem;
+        width: 20rem;
         flex: 1;
 
     }
@@ -22,7 +22,7 @@ export const Container = styled.section`
 
     @media(max-width: 1450px) {
         > .perfil {
-            width: 30rem;
+            width: 10rem;
         }
 
         > div {
@@ -32,7 +32,7 @@ export const Container = styled.section`
 
     @media(max-width: 1000px) {
         > .perfil {
-            width: 22rem;
+            width: 5rem;
         }
     
     }
