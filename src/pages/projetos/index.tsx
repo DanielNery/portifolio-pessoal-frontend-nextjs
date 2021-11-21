@@ -1,6 +1,6 @@
 
 import Header from '../../components/Header';
-import { ProjetosContainer } from '../../styles/ProjetosStyles.ts';
+import { ProjetosContainer } from '../../styles/ProjetosStyles';
 import ProjetoPageItem from '../../components/ProjetoPageItem';
 import Footer from '../../components/Footer';
 
