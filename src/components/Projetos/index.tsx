@@ -11,21 +11,21 @@ function Projetos() {
       <section>
         <ProjetoItem 
           img="https://thumbs.dreamstime.com/z/ui-infogr%C3%A1fico-conjunto-de-dashboard-com-estat%C3%ADsticas-e-an%C3%A1lises-interface-web-cole%C3%A7%C3%A3o-gr%C3%A1ficos-projeto-diagramas-209013577.jpg"
-          title="Projeto 01"
-          type="Website"
-          slug="teste"
+          title="Dashboard em Tempo Real"
+          type="Sistema WEB"
+          slug="dashboard-tempo-real"
         />
         <ProjetoItem 
-          img="https://thumbs.dreamstime.com/z/ui-infogr%C3%A1fico-conjunto-de-dashboard-com-estat%C3%ADsticas-e-an%C3%A1lises-interface-web-cole%C3%A7%C3%A3o-gr%C3%A1ficos-projeto-diagramas-209013577.jpg"
-          title="Projeto 01"
+          img="https://user-images.githubusercontent.com/59855397/137625571-170aec0a-a311-4d47-9054-e8af64437074.png"
+          title="Plataforma de Trocas Online"
           type="Website"
-          slug="teste"
+          slug="olx-shift"
         />
         <ProjetoItem 
-          img="https://thumbs.dreamstime.com/z/ui-infogr%C3%A1fico-conjunto-de-dashboard-com-estat%C3%ADsticas-e-an%C3%A1lises-interface-web-cole%C3%A7%C3%A3o-gr%C3%A1ficos-projeto-diagramas-209013577.jpg"
-          title="Projeto 01"
+          img="https://user-images.githubusercontent.com/59855397/137046126-d61508fb-9b32-4a54-ba49-8a29c29099e9.png"
+          title="Plataforma de Listagem de Músicas"
           type="Website"
-          slug="teste"
+          slug="genius-list-msc"
         />
       </section>
 

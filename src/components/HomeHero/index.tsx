@@ -9,8 +9,8 @@ function HomeHero() {
       <Image src="/perfil.png" alt="me" width="500" height="500" className="perfil" />
       <div>
         <TextContainer>
-          <h1>Olá</h1>
-          <h2>Me chamo Daniel</h2>
+          <h1>Hello World</h1>
+          <h2>Seja bem vindo(a)</h2>
         </TextContainer>
         <InfosContainer>
           <CodeItem>
@@ -27,10 +27,10 @@ function HomeHero() {
           <CodeItem>
             <span className="purple">Cargo</span>{'\u007B'}
             <div>
-              Função: <span className="blue">Dev FullStack</span>
+              Função: <span className="blue">Analista de Sistemas</span>
             </div>
             <div>
-              Empresa: <span className="blue">Nery</span>
+              Empresa: <span className="blue">Confitec</span>
             </div>
             {'\u007B'}
           </CodeItem>
