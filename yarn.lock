@@ -431,10 +431,10 @@
     "slash" "^3.0.0"
     "tiny-glob" "^0.2.9"
 
-"@next/env@12.0.5-canary.6":
-  "integrity" "sha512-m3TVv43FH0vL19gm0MzGR6GpN9K+9RqCAHYHBCqpaukRtofyb8VSdNYLBkmUwma1s+Kz0gojLpXtxOVoB7KODA=="
-  "resolved" "https://registry.npmjs.org/@next/env/-/env-12.0.5-canary.6.tgz"
-  "version" "12.0.5-canary.6"
+"@next/env@12.0.4":
+  "integrity" "sha512-QtZ6X5c6Zqa7oWs5csEmZ7xy+gLdtRKKg02SOT5l0Ziea4P5IU8mSOCyNC4fZmXewcRVjpbY+yGqAAP7hJUfOA=="
+  "resolved" "https://registry.npmjs.org/@next/env/-/env-12.0.4.tgz"
+  "version" "12.0.4"
 
 "@next/eslint-plugin-next@^12.0.4":
   "integrity" "sha512-3N+LG+wQQB0JLfMj4YKkefWnjcsFVBmixRWdzbVBnt/cxbVZ0izf+BR1MzvrPX1oaP0OrYk8X/9Mn9Yftuajvg=="
@@ -443,15 +443,15 @@
   dependencies:
     "glob" "7.1.7"
 
-"@next/polyfill-module@12.0.5-canary.6":
-  "integrity" "sha512-Zl/ZFdg6+yIlY/ktzS7B09kNhN0zr9o/iFW7ksBTb+gAyEEPXRH4zxt285becrPvBp7N0DhZJGiebjqi3vMQGw=="
-  "resolved" "https://registry.npmjs.org/@next/polyfill-module/-/polyfill-module-12.0.5-canary.6.tgz"
-  "version" "12.0.5-canary.6"
+"@next/polyfill-module@12.0.4":
+  "integrity" "sha512-mk9yCDNpfXINTJKFTZNgwYs7eqRFpc5D/49O/fKB59blihyKl1GY1sZ0l7a2bn5l1X/WuaZzcIfqnrwkneqeaQ=="
+  "resolved" "https://registry.npmjs.org/@next/polyfill-module/-/polyfill-module-12.0.4.tgz"
+  "version" "12.0.4"
 
-"@next/react-dev-overlay@12.0.5-canary.6":
-  "integrity" "sha512-L9cGeUUY1MJ45Cc8pJf1psCMeIMsGHIcRrU+dhk5uGZa8DU5+f8kvU9JAAjoYfnLpiOlTpzk7hhapOFDcL67UQ=="
-  "resolved" "https://registry.npmjs.org/@next/react-dev-overlay/-/react-dev-overlay-12.0.5-canary.6.tgz"
-  "version" "12.0.5-canary.6"
+"@next/react-dev-overlay@12.0.4":
+  "integrity" "sha512-9O0lXyzv5goFSmDwq9Hp8JE+DcObvd+bTXvmGSSvYR91AlIoVlH8/PwATx8Rf5YEuqggn/XKR1hn2kBYcbcGnA=="
+  "resolved" "https://registry.npmjs.org/@next/react-dev-overlay/-/react-dev-overlay-12.0.4.tgz"
+  "version" "12.0.4"
   dependencies:
     "@babel/code-frame" "7.12.11"
     "anser" "1.4.9"
@@ -465,20 +465,20 @@
     "stacktrace-parser" "0.1.10"
     "strip-ansi" "6.0.1"
 
-"@next/react-refresh-utils@12.0.5-canary.6":
-  "integrity" "sha512-WoYQN3eSOoq/Z3nEZvrRX//sFB8x2rTLgQqS2z1K/jVriLUY1vFbOl4Paqwfp9+Cxjs/Qz+gsKqUxpHM+5VcxA=="
-  "resolved" "https://registry.npmjs.org/@next/react-refresh-utils/-/react-refresh-utils-12.0.5-canary.6.tgz"
-  "version" "12.0.5-canary.6"
+"@next/react-refresh-utils@12.0.4":
+  "integrity" "sha512-kNUDmpBaJ+8Lb8CtKNynRFF9oijCjUKKru6Ont+JKhti9//5dNFFIcuo607bJSH86un06OEK0TZUt5XWVlbkjw=="
+  "resolved" "https://registry.npmjs.org/@next/react-refresh-utils/-/react-refresh-utils-12.0.4.tgz"
+  "version" "12.0.4"
 
-"@next/swc-linux-x64-gnu@12.0.5-canary.6":
-  "integrity" "sha512-h/vGyx72kIBTOALg5hCD2GE7Qq/p/cYGGRrWqhhNJTkt7skukh8wEMXaNbjZrVZ29F97xpu6KDPzINZ1QrkQ9A=="
-  "resolved" "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-12.0.5-canary.6.tgz"
-  "version" "12.0.5-canary.6"
+"@next/swc-linux-x64-gnu@12.0.4":
+  "integrity" "sha512-aBuf78QzL93T59Lk9kEGfHcA+9SzYIH7dGon1nqVxtAd2iqicKYNVaVcb38VKeiIBXMSUHXTdu6Ee053ZCOmSw=="
+  "resolved" "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-12.0.4.tgz"
+  "version" "12.0.4"
 
-"@next/swc-linux-x64-musl@12.0.5-canary.6":
-  "integrity" "sha512-nEg96/lKj2PZH5YiiCK/GZtYslh9VhpO+Gs6jYkFDqpgngkUdyJNk4J6QI6dNOc38ZFo0oscW7eb88lpihBenw=="
-  "resolved" "https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-12.0.5-canary.6.tgz"
-  "version" "12.0.5-canary.6"
+"@next/swc-linux-x64-musl@12.0.4":
+  "integrity" "sha512-yDgqUqL4H8M3Y0hv30ZyL9UvjnK4iXmD4I6iJz+XIHSRdA/VUiyKKoL7okf9hxr0mSxBtagbZ5A3qEoW/VliUQ=="
+  "resolved" "https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-12.0.4.tgz"
+  "version" "12.0.4"
 
 "@nodelib/fs.scandir@2.1.5":
   "integrity" "sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g=="
@@ -3572,18 +3572,18 @@
     "file-loader" "^6.2.0"
     "url-loader" "^4.1.0"
 
-"next@^12.0.5-canary.6", "next@^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0":
-  "integrity" "sha512-OwTI2l0X3Wu74K2wOmPu91avyD233dDbUdUWkB4vzfvjtsnELyGMT07FV8P0yZvjLFGsn6LUZ0n7oMmwPsM2ng=="
-  "resolved" "https://registry.npmjs.org/next/-/next-12.0.5-canary.6.tgz"
-  "version" "12.0.5-canary.6"
+"next@^12.0.4", "next@^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0":
+  "integrity" "sha512-1pvjcSZBm5OLoGmDhp4JwKwIE798WbqUNLuyU7w6a2jUkdWaxOYtkE/ROXQTi2pXHj7+6rm68AvhxROLX2NHQg=="
+  "resolved" "https://registry.npmjs.org/next/-/next-12.0.4.tgz"
+  "version" "12.0.4"
   dependencies:
     "@babel/runtime" "7.15.4"
     "@hapi/accept" "5.0.2"
     "@napi-rs/triples" "1.0.3"
-    "@next/env" "12.0.5-canary.6"
-    "@next/polyfill-module" "12.0.5-canary.6"
-    "@next/react-dev-overlay" "12.0.5-canary.6"
-    "@next/react-refresh-utils" "12.0.5-canary.6"
+    "@next/env" "12.0.4"
+    "@next/polyfill-module" "12.0.4"
+    "@next/react-dev-overlay" "12.0.4"
+    "@next/react-refresh-utils" "12.0.4"
     "acorn" "8.5.0"
     "assert" "2.0.0"
     "browserify-zlib" "0.2.0"
@@ -3627,17 +3627,17 @@
     "vm-browserify" "1.1.2"
     "watchpack" "2.1.1"
   optionalDependencies:
-    "@next/swc-android-arm64" "12.0.5-canary.6"
-    "@next/swc-darwin-arm64" "12.0.5-canary.6"
-    "@next/swc-darwin-x64" "12.0.5-canary.6"
-    "@next/swc-linux-arm-gnueabihf" "12.0.5-canary.6"
-    "@next/swc-linux-arm64-gnu" "12.0.5-canary.6"
-    "@next/swc-linux-arm64-musl" "12.0.5-canary.6"
-    "@next/swc-linux-x64-gnu" "12.0.5-canary.6"
-    "@next/swc-linux-x64-musl" "12.0.5-canary.6"
-    "@next/swc-win32-arm64-msvc" "12.0.5-canary.6"
-    "@next/swc-win32-ia32-msvc" "12.0.5-canary.6"
-    "@next/swc-win32-x64-msvc" "12.0.5-canary.6"
+    "@next/swc-android-arm64" "12.0.4"
+    "@next/swc-darwin-arm64" "12.0.4"
+    "@next/swc-darwin-x64" "12.0.4"
+    "@next/swc-linux-arm-gnueabihf" "12.0.4"
+    "@next/swc-linux-arm64-gnu" "12.0.4"
+    "@next/swc-linux-arm64-musl" "12.0.4"
+    "@next/swc-linux-x64-gnu" "12.0.4"
+    "@next/swc-linux-x64-musl" "12.0.4"
+    "@next/swc-win32-arm64-msvc" "12.0.4"
+    "@next/swc-win32-ia32-msvc" "12.0.4"
+    "@next/swc-win32-x64-msvc" "12.0.4"
 
 "nextjs-progressbar@^0.0.11":
   "integrity" "sha512-4JQkUHgDG6gz5r04lW06cMerKhQeXXq1RCSz2WqHMcJCDgKLCCqRokn603LlEORNpzBEY/pTZJIOlzf2eh4mFQ=="
