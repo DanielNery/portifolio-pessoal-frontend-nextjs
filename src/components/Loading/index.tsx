@@ -1,4 +1,4 @@
-import { LoadingContainer, LoadingSpinner } from './styles.ts';
+import { LoadingContainer, LoadingSpinner } from './styles';
 
 const Loading = () => {
     return (
