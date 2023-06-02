@@ -1,6 +1,5 @@
 
 import { Container, TextContainer, InfosContainer, CodeItem } from './styles';
-import Image from 'next/image'
 
 function HomeHero() {
   
