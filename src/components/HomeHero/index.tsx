@@ -6,7 +6,7 @@ function HomeHero() {
   
   return (
     <Container>
-      <Image src="/perfil4.png" alt="me" width="500" height="500" className="perfil" />
+      <img src="/perfil5.jpg" alt="me" className="perfil" />
       <div>
         <TextContainer>
           <h1>Hello World</h1>

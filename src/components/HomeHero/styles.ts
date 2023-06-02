@@ -10,9 +10,9 @@ export const Container = styled.section`
 
 
     > .perfil {
-        width: 20rem;
+        width: 2rem;
         flex: 1;
-
+        border-radius: 50% !important; /* Adicione essa linha para tornar o .perfil redondo */
     }
 
     > div {
@@ -23,6 +23,7 @@ export const Container = styled.section`
     @media(max-width: 1450px) {
         > .perfil {
             width: 10rem;
+            border-radius: 50%; /* Adicione essa linha para tornar o .perfil redondo */
         }
 
         > div {
@@ -33,6 +34,7 @@ export const Container = styled.section`
     @media(max-width: 1000px) {
         > .perfil {
             width: 5rem;
+            border-radius: 50%; /* Adicione essa linha para tornar o .perfil redondo */
         }
     
     }
