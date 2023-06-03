@@ -14,7 +14,7 @@ function HomeHero() {
         <InfosContainer>
           <CodeItem>
             <span className="comment">//Minha apresentação</span>
-            <span className="purple">Infos</span>{'\u007B'}
+            <span className="purple">Infos </span>{'\u007B'}
             <div>
               Nome: <span className="blue">Daniel,</span>
             </div>
@@ -24,7 +24,7 @@ function HomeHero() {
             {'\u007B'}
           </CodeItem>
           <CodeItem>
-            <span className="purple">Cargo</span>{'\u007B'}
+            <span className="purple">Cargo </span>{'\u007B'}
             <div>
               Função: <span className="blue">Analista de Sistemas</span>
             </div>
