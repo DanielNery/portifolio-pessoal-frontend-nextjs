@@ -37,7 +37,6 @@ function Projetos() {
                   img={item.nm_image}
                   title={item.title}
                   type={item.nm_type}
-                  description={item.nm_description}
                   slug={item.nm_slug}
                 />
               ))}
