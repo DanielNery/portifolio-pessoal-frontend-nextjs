@@ -30,7 +30,7 @@ export default function Home() {
 
   return (
     <HomeContainer>
-        <DataComponent request={fetchData} />
+        <DataComponent request={fetchData} /> 
         <Header />
         <main className="container"> 
           <HomeHero />

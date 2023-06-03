@@ -15,7 +15,7 @@ export const LoadingContainer = styled.div`
 export const LoadingSpinner = styled.div`
   width: 40px;
   height: 40px;
-  border: 4px solid #f3f3f3;
+  border: 4px solid #11172b;
   border-top: 4px solid #3498db;
   border-radius: 50%;
   animation: ${spinAnimation} 1s linear infinite;

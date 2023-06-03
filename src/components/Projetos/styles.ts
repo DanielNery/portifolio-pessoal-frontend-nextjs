@@ -123,7 +123,6 @@ export const ProjetoContainer = styled.div<ProjetoProps>`
                 color: ${({ theme }) => theme.primary};
                 font-size: 2.5rem;
                 text-shadow: -4px 5px 22px #11172b;
-
             }
 
             > h2 {
@@ -230,12 +229,12 @@ export const ProjetoContainer = styled.div<ProjetoProps>`
 
         > section > div.text {
             h1 {
-                font-size: 1.5rem;
+                font-size: 1rem;
                 
             }
 
             h2 {
-                font-size: 1rem;
+                font-size: 0.5rem;
             }
         }
     }

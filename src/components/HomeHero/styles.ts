@@ -10,7 +10,7 @@ export const Container = styled.section`
 
 
     > .perfil {
-        width: 50%;
+        width: 35%;
         flex: 1;
         border-radius: 50% !important; /* Adicione essa linha para tornar o .perfil redondo */
     }
