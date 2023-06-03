@@ -20,10 +20,10 @@ export default function Home() {
   const fetchData = async () => {
     const response = await axios.post('https://danielpontesnery.onrender.com/api/v1/health', data)
       .then(response => {
-        toast.success("Carregamento realizado com sucesso!")
+        toast.success("Acesso registrado com sucesso!")
       })
       .catch(error => {
-        toast.error("Erro ao inicializar serviços!")
+        toast.error("Erro ao registrar acesso!")
       })
   };
 

@@ -1,16 +1,54 @@
 
+import React, { useState } from 'react';
+
+import axios from 'axios';
 import SectionTitle from '../SectionTitle';
 import ExperienciaItem from './ExperienciaItem';
+import DataComponent from '../../components/DataComponent';
+import Loading from '../Loading';
+
+import { toast } from 'react-toastify';
 import { Container } from './styles';
 
 
 function Experiencias() {
+
+  const [data, setData] = useState<any>(null);
+
+  const fetchData = async () => {
+    const response = await axios.get('https://danielpontesnery.onrender.com/api/v1/experiences', data)
+      .then(response => {
+        setData(response.data);
+        toast.success("Experiências carregadas com sucesso!")
+      })
+      .catch(error => {
+        toast.error("Não foi possível obter as experiências!")
+      })
+  };
+  
+
   return (
     <Container>
+      <DataComponent request={fetchData} /> 
       <SectionTitle title="02 Anos" description="de Experiência"/>
 
-      <section>
-        <ExperienciaItem 
+
+      {/* <section> */}
+        {data ? (
+          <section>
+            {data.map((item) => (
+              <ExperienciaItem
+                year={item.year}
+                title={item.title}
+                description={item.description}
+              />
+            ))}
+          </section>
+        ) : (
+          <Loading />
+        )}
+
+        {/* <ExperienciaItem 
           year="2021"
           title="Analista de Sistemas"
           description="
@@ -49,8 +87,8 @@ function Experiencias() {
           "
         />
 
-        
-      </section>
+         */}
+      {/* </section> */}
 
     </Container>
   );
