@@ -25,14 +25,12 @@ export default function Form(){
     
         try {
         
-          const response = await axios.post(`https://danielpontesnery.onrender.com/api/v1/contato/${formData.email}`, formData);
+          const response = await axios.post(`https://danielpontesnery.onrender.com/api/v1/contato/danielpontesnery@gmail.com`, formData);
           setData(response.data);
           toast.success("Mensagem enviada com sucesso, em até 48 horas retornaremos o contato!")
           console.log('Form submitted:', response.data);
-          // Aqui você pode fazer algo com a resposta da requisição, como redirecionar a página ou exibir uma mensagem de sucesso.
         } catch (error) {
           toast.error("Falha ao enviar mensagem, tente novamente mais tarde.")
-          // Aqui você pode lidar com erros na requisição, como exibir uma mensagem de erro.
         }
       };
 
