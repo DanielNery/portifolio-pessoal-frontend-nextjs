@@ -19,6 +19,7 @@ function Experiencias() {
     const response = await axios.get('https://danielpontesnery.onrender.com/api/v1/experiences', data)
       .then(response => {
         setData(response.data);
+        console.log(response.data)
         toast.success("Experiências carregadas com sucesso!")
       })
       .catch(error => {
@@ -38,9 +39,9 @@ function Experiencias() {
           <section>
             {data.map((item) => (
               <ExperienciaItem
-                year={item.year}
-                title={item.title}
-                description={item.description}
+                year={item.nm_year}
+                title={item.nm_title}
+                description={item.nm_description}
               />
             ))}
           </section>
