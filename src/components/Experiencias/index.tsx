@@ -31,7 +31,7 @@ function Experiencias() {
   return (
     <Container>
       <DataComponent request={fetchData} /> 
-      <SectionTitle title="02 Anos" description="de Experiência"/>
+      <SectionTitle title="03 Anos" description="de Experiência"/>
 
 
       {/* <section> */}
