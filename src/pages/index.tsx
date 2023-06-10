@@ -22,7 +22,9 @@ export default function Home() {
   const fetchData = async () => {
 
     const payload = {
-
+      name: '',
+      email: '',
+      message: 'Acesso registrado no portifólio!',
     }
 
     const response = await axios.post('https://danielpontesnery.onrender.com/api/v1/health', payload)
@@ -34,6 +36,17 @@ export default function Home() {
         setData({})
         toast.error("Erro ao registrar acesso!")
       })
+
+    const email = await axios.post(`https://danielpontesnery.onrender.com/api/v1/contato/danielpontesnery@gmail.com`, payload)
+      .then(email => {
+        //setData(response.data)
+        toast.success("Notificação enviada com sucesso!")
+      })
+      .catch(error => {
+        //setData({})
+        toast.error("Erro ao enviar notificação!")
+      })
+
   };
 
 
