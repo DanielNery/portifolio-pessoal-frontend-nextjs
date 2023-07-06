@@ -35,7 +35,7 @@ function Projetos() {
               {data.map((item) => (
                 <ProjetoItem
                   img={item.nm_image}
-                  title={item.title}
+                  title={item.nm_title}
                   type={item.nm_type}
                   slug={item.nm_slug}
                 />
