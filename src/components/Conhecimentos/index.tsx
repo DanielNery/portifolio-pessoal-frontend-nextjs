@@ -33,7 +33,7 @@ function Conhecimentos() {
     <Container>
       <SectionTitle title="Conhecimentos" />
         <DataComponent request={fetchData} /> 
-        {data ? (
+        {/* {data ? (
             <section>
               {data.map((item) => (
                 <ConhecimentoItem
@@ -44,9 +44,9 @@ function Conhecimentos() {
             </section>
           ) : (
           <Loading />
-        )}
+        )} */}
 
-      {/* <section>
+      <section>
         <ConhecimentoItem title="REACJS" icon={<GrReactjs />} />
         <ConhecimentoItem title="FLASK" icon={<SiFlask />} />
         <ConhecimentoItem title="DJANGO" icon={<SiDjango />} />
@@ -54,7 +54,7 @@ function Conhecimentos() {
         <ConhecimentoItem title="PYTHON" icon={<IoLogoPython />} />
         <ConhecimentoItem title="DOCKER" icon={<GrDocker />} />
         <ConhecimentoItem title="AWS" icon={<SiAmazonaws />} />
-      </section> */}
+      </section> 
     </Container>
   );
 };
