@@ -26,30 +26,30 @@ function Experiencias() {
         toast.error("Não foi possível obter as experiências!")
       })
   };
-  
+
 
   return (
     <Container>
-      <DataComponent request={fetchData} /> 
-      <SectionTitle title="03 Anos" description="de Experiência"/>
+      <DataComponent request={fetchData} />
+      <SectionTitle title="05 Anos" description="de Experiência" />
 
 
       {/* <section> */}
-        {data ? (
-          <section>
-            {data.map((item) => (
-              <ExperienciaItem
-                year={item.nm_year}
-                title={item.nm_title}
-                description={item.nm_description}
-              />
-            ))}
-          </section>
-        ) : (
-          <Loading />
-        )}
+      {data ? (
+        <section>
+          {data.map((item) => (
+            <ExperienciaItem
+              year={item.nm_year}
+              title={item.nm_title}
+              description={item.nm_description}
+            />
+          ))}
+        </section>
+      ) : (
+        <Loading />
+      )}
 
-        {/* <ExperienciaItem 
+      {/* <ExperienciaItem 
           year="2021"
           title="Analista de Sistemas"
           description="

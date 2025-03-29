@@ -2,10 +2,10 @@
 import { Container, TextContainer, InfosContainer, CodeItem } from './styles';
 
 function HomeHero() {
-  
+
   return (
     <Container>
-      <img src="/perfil5.jpg" alt="me" className="perfil" />
+      <img src="/perfil6.jpeg" alt="me" className="perfil" />
       <div>
         <TextContainer>
           <h1>Hello World</h1>
@@ -13,7 +13,7 @@ function HomeHero() {
         </TextContainer>
         <InfosContainer>
           <CodeItem>
-            <span className="comment">//Minha apresentação</span>
+            <span className="comment">// Minha apresentação</span>
             <span className="purple">Infos </span>{'\u007B'}
             <div>
               Nome: <span className="blue">Daniel,</span>
