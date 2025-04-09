@@ -10,9 +10,11 @@ export const Container = styled.section`
 
 
     > .perfil {
-        width: 35%;
-        flex: 1;
-        border-radius: 50% !important; /* Adicione essa linha para tornar o .perfil redondo */
+        width: 25rem;
+        height: 25rem;
+        flex: none;
+        object-fit: cover;
+        border-radius: 50%;
     }
 
     > div {
@@ -22,7 +24,8 @@ export const Container = styled.section`
 
     @media(max-width: 1450px) {
         > .perfil {
-            border-radius: 50%; /* Adicione essa linha para tornar o .perfil redondo */
+            width: 20rem;
+            height: 20rem;
         }
 
         > div {
@@ -32,19 +35,22 @@ export const Container = styled.section`
 
     @media(max-width: 1000px) {
         > .perfil {
-            border-radius: 50%; /* Adicione essa linha para tornar o .perfil redondo */
+            width: 15rem;
+            height: 15rem;
         }
-    
     }
 
     @media(max-width: 700px) {
         flex-direction: column-reverse;
 
+        > .perfil {
+            width: 12rem;
+            height: 12rem;
+        }
+
         > div {
             width: 100%;
         }
-
-    
     }
 `;
 
@@ -54,13 +60,13 @@ export const TextContainer = styled.section`
 
     h1 {
         font-size: 8rem;
-        color: ${({theme}) => theme.primary};
+        color: ${({ theme }) => theme.primary};
     }
 
     h2 {
         font-size: 3rem;
         font-weigth: 400;
-        color: ${({theme}) => theme.secondary};
+        color: ${({ theme }) => theme.secondary};
     }
 
     @media(max-width: 1450px) {
@@ -88,13 +94,18 @@ export const InfosContainer = styled.section`
 
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 2rem;
+
+    @media(max-width: 500px) {
+        margin-top: 10px;
+        flex-direction: column;
+    }
 
 `;
 
 export const CodeItem = styled.pre`
-    background: ${({theme}) => theme.gradient};
+    background: ${({ theme }) => theme.gradient};
     padding: 2rem;
     font-family: 'JetBrains Mono', monospace;
     font-weight: 300;
@@ -140,7 +151,7 @@ export const CodeItem = styled.pre`
     }
 
     span.comment {
-        color: ${({theme}) => theme.text};
+        color: ${({ theme }) => theme.text};
         margin-bottom: 1rem;
         display: block;
     }
