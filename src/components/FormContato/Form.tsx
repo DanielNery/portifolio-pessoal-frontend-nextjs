@@ -5,7 +5,7 @@ import Loading from '../Loadingzin';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-export default function Form(){
+export default function Form({ utm }: { utm?: string }){
 
     const [data, setData] = useState<any>(true);
     
@@ -13,6 +13,7 @@ export default function Form(){
         name: '',
         email: '',
         message: '',
+        utm: utm || '',
       });
     
       const handleChange = (e) => {

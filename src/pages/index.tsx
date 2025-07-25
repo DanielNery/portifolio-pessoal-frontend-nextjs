@@ -10,43 +10,50 @@ import Loading from '../components/Loading';
 
 import axios from 'axios';
 
-import React, { useState } from 'react';
+import { useRouter } from 'next/router';
 import { toast } from 'react-toastify';
 import { HomeContainer } from '../styles/HomeStyles';
+import { useState, useEffect } from 'react';
 
 
 export default function Home() {
 
   const [data, setData] = useState<any>(null);  
+  const router = useRouter();
+  const utm = router.query.utm || '';
+  const utmValue = Array.isArray(utm) ? utm[0] : utm;
+
+  useEffect(() => {
+    if (!router.isReady) return;
+    fetchData();
+    // eslint-disable-next-line
+  }, [router.isReady]);
 
   const fetchData = async () => {
-
-    const payload = {
+    let payload: any = {
       name: '',
       email: '',
       message: 'Acesso registrado no portifólio!',
+    };
+    if (utmValue && typeof utmValue === 'string' && utmValue.trim() !== '') {
+      payload.utm = utmValue;
     }
 
-    const response = await axios.post('https://danielpontesnery.onrender.com/api/v1/health', payload)
-      .then(response => {
-        setData(response.data)
-        toast.success("Acesso registrado com sucesso!")
-      })
-      .catch(error => {
-        setData({})
-        toast.error("Erro ao registrar acesso!")
-      })
+    try {
+      const response = await axios.post('https://danielpontesnery.onrender.com/api/v1/health', payload);
+      setData(response?.data || {});
+      toast.success("Acesso registrado com sucesso!");
+    } catch (error) {
+      setData({});
+      toast.error("Erro ao registrar acesso!");
+    }
 
-    const email = await axios.post(`https://danielpontesnery.onrender.com/api/v1/contato/danielpontesnery@gmail.com`, payload)
-      .then(email => {
-        //setData(response.data)
-        toast.success("Notificação enviada com sucesso!")
-      })
-      .catch(error => {
-        //setData({})
-        toast.error("Erro ao enviar notificação!")
-      })
-
+    try {
+      await axios.post(`https://danielpontesnery.onrender.com/api/v1/contato/danielpontesnery@gmail.com`, payload);
+      toast.success("Notificação enviada com sucesso!");
+    } catch (error) {
+      toast.error("Erro ao enviar notificação!");
+    }
   };
 
 
@@ -61,7 +68,7 @@ export default function Home() {
             <Experiencias />
             <Projetos />
             <Conhecimentos />
-            <FormContato />
+            <FormContato utm={utmValue} />
           </main>
           <Footer />
       </HomeContainer>
