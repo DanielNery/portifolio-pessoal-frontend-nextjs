@@ -22,6 +22,7 @@ export default createGlobalStyle`
   body {
     background: ${props => props.theme.background};
     font: 400 1rem 'Montserrat', sans-serif;
+    overflow-x: hidden;
   }
   img {
     width: 100%;
@@ -49,7 +50,7 @@ export default createGlobalStyle`
       max-width: 50rem;
     }
     @media(max-width:700px) {
-      padding: 0 2rem;
+      padding: 0 1rem;
     }
   }
 `;

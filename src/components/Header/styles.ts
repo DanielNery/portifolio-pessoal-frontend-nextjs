@@ -1,43 +1,47 @@
-import { lighten } from 'polished';
 import styled from 'styled-components';
 
 interface NavLinkProps {
-    isActive: boolean;
+  isActive: boolean;
 }
 
 export const Container = styled.header`
-    width: 100%;
-    height: auto;
-    padding: 1rem;
+  width: 100%;
+  max-width: 85rem;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid ${({ theme }) => theme.backgroundLight};
+
+  .brand {
+    color: #fff;
+    font-weight: 700;
+    font-size: .9rem;
+    white-space: nowrap;
+    span { color: ${({ theme }) => theme.primary}; font-family: 'JetBrains Mono', monospace; }
+  }
+  nav { display: flex; align-items: center; gap: .9rem; }
+  nav > a { color: ${({ theme }) => theme.textLight}; font-size: .78rem; }
+  .contact {
+    padding: .65rem .8rem;
+    border-radius: .55rem;
+    background: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.background};
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-bottom: 1px solid ${({ theme }) => theme.backgroundLight};
-    
-    ul {
-        display: flex;
-        gap: 2rem;
-        align-items: center;
-    }
-
-    @media(max-width: 700px) {
-        ul {
-            flex-direction: column;
-        }
-    }
+    gap: .4rem;
+    font-weight: 600;
+  }
+  @media (max-width: 420px) {
+    nav > a:not(.contact) { display: none; }
+    .contact { font-size: .7rem; }
+  }
 `;
 
+// Mantido para as páginas internas que ainda usam o componente NavLink.
 export const NavLinkContainer = styled.li<NavLinkProps>`
-
-    a {
-        text-transform: uppercase;
-        color: ${(props) => 
-            props.isActive ? props.theme.primary : props.theme.textHighlight};
-        transition:0.5s;
-        
-        &:hover {
-            color: ${props => props.isActive ? lighten(0.2, props.theme.primary) : lighten(0.2, props.theme.textHighlight)};
-        }
-    }
-
+  a {
+    color: ${({ isActive, theme }) => isActive ? theme.primary : theme.textLight};
+  }
 `;

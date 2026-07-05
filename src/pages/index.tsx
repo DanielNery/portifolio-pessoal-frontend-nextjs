@@ -1,17 +1,14 @@
-import Conhecimentos from "../components/Conhecimentos";
-import Experiencias from "../components/Experiencias";
 import Footer from "../components/Footer";
 import FormContato from "../components/FormContato";
 import Header from "../components/Header";
 import HomeHero from "../components/HomeHero";
 import Projetos from "../components/Projetos";
-import DataComponent from '../components/DataComponent';
 import Loading from '../components/Loading';
+import Head from 'next/head';
 
 import axios from 'axios';
 
 import { useRouter } from 'next/router';
-import { toast } from 'react-toastify';
 import { HomeContainer } from '../styles/HomeStyles';
 import { useState, useEffect } from 'react';
 
@@ -20,59 +17,68 @@ export default function Home() {
 
   const [data, setData] = useState<any>(null);  
   const router = useRouter();
-  const utm = router.query.utm || '';
-  const utmValue = Array.isArray(utm) ? utm[0] : utm;
+  const [utmValue, setUtmValue] = useState('');
 
   useEffect(() => {
     if (!router.isReady) return;
-    fetchData();
+    const trackedParams = ['utm', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+    const tracking = trackedParams
+      .map(key => {
+        const value = router.query[key];
+        const normalized = Array.isArray(value) ? value[0] : value;
+        return normalized ? `${key}=${normalized}` : '';
+      })
+      .filter(Boolean)
+      .join(' | ');
+
+    setUtmValue(tracking);
+    fetchData(tracking);
     // eslint-disable-next-line
   }, [router.isReady]);
 
-  const fetchData = async () => {
+  const fetchData = async (tracking: string) => {
     let payload: any = {
       name: '',
       email: '',
       message: 'Acesso registrado no portifólio!',
     };
-    if (utmValue && typeof utmValue === 'string' && utmValue.trim() !== '') {
-      payload.utm = utmValue;
+    if (tracking) {
+      payload.utm = tracking;
     }
 
     try {
       const response = await axios.post('https://danielpontesnery.onrender.com/api/v1/health', payload);
       setData(response?.data || {});
-      toast.success("Acesso registrado com sucesso!");
     } catch (error) {
       setData({});
-      toast.error("Erro ao registrar acesso!");
     }
 
     try {
       await axios.post(`https://danielpontesnery.onrender.com/api/v1/contato/danielpontesnery@gmail.com`, payload);
-      toast.success("Notificação enviada com sucesso!");
     } catch (error) {
-      toast.error("Erro ao enviar notificação!");
+      // A indisponibilidade da notificação não impede o visitante de acessar o site.
     }
   };
 
 
   return (
     <>
-    <DataComponent request={fetchData} /> 
+    <Head>
+      <title>Daniel Nery | Engenharia de Software & Consultoria</title>
+      <meta name="description" content="Consultoria, desenvolvimento, automação, treinamentos e palestras com Daniel Nery, engenheiro de software." />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </Head>
     { data ? (
         <HomeContainer>
           <Header />
           <main className="container"> 
             <HomeHero />
-            <Experiencias />
             <Projetos />
-            <Conhecimentos />
             <FormContato utm={utmValue} />
           </main>
           <Footer />
       </HomeContainer>
-      ) : <></>
+      ) : <Loading />
     }</>
   );
 }

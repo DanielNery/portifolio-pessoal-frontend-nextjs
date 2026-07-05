@@ -9,7 +9,14 @@ export const HomeContainer = styled.div`
     > main {
         display: flex;
         flex-direction: column;
-        gap: 8rem;
+        gap: 6rem;
+        padding-bottom: 5rem;
         
+    }
+
+    @media(max-width: 700px) {
+        > main {
+            gap: 4.5rem;
+        }
     }
 `;

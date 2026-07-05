@@ -32,8 +32,9 @@ function Projetos() {
         <DataComponent request={fetchData} /> 
         {data ? (
             <section>
-              {data.map((item) => (
+              {data.slice(0, 3).map((item) => (
                 <ProjetoItem
+                  key={item.nm_slug}
                   img={item.nm_image}
                   title={item.nm_title}
                   type={item.nm_type}
