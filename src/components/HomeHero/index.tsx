@@ -1,111 +1,91 @@
 import Link from 'next/link';
 import {
-  FiArrowRight,
+  FiArrowUpRight,
   FiBookOpen,
   FiCode,
-  FiCpu,
+  FiFolder,
   FiMessageCircle,
-  FiMic,
-  FiShield,
-  FiZap
+  FiMic
 } from 'react-icons/fi';
 
-import {
-  About,
-  Actions,
-  Badge,
-  Container,
-  HeroCard,
-  ServiceCard,
-  Services,
-  Skills
-} from './styles';
+import { Container, LinkList, Profile } from './styles';
 
-const whatsappUrl =
-  'https://wa.me/5511947470374?text=Ol%C3%A1%2C%20Daniel!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.';
+const whatsapp = 'https://wa.me/5511947470374';
 
-const services = [
-  {
-    icon: <FiCode />,
-    title: 'Desenvolvimento',
-    text: 'Sistemas, APIs e integrações sob medida, do desenho à entrega.'
-  },
-  {
-    icon: <FiCpu />,
-    title: 'Consultoria técnica',
-    text: 'Arquitetura, Odoo ERP, automações e evolução de produtos.'
-  },
-  {
-    icon: <FiBookOpen />,
-    title: 'Treinamentos',
-    text: 'Conteúdo prático para times de engenharia e negócios.'
-  },
-  {
-    icon: <FiMic />,
-    title: 'Palestras',
-    text: 'Tecnologia, carreira e engenharia aplicadas à vida real.'
-  }
-];
+const whatsappLink = (message: string) =>
+  `${whatsapp}?text=${encodeURIComponent(message)}`;
 
 function HomeHero() {
   return (
     <Container>
-      <Badge><span /> Disponível para novos projetos</Badge>
-
-      <HeroCard>
-        <div className="portrait">
+      <Profile>
+        <div className="photo">
           <img src="/perfil.png" alt="Daniel Pontes Nery" />
-          <span className="experience">+6 anos<br />de experiência</span>
+          <span />
         </div>
-
-        <div className="intro">
-          <p className="eyebrow">Engenheiro de Software & Consultor</p>
-          <h1>Transformo desafios de negócio em <strong>software que funciona.</strong></h1>
-          <p className="lead">
-            Ajudo empresas e times a construir, integrar e automatizar soluções
-            robustas — com estratégia, código e foco no resultado.
-          </p>
-
-          <Actions>
-            <a className="primary" href={whatsappUrl} target="_blank" rel="noreferrer">
-              <FiMessageCircle /> Agendar uma conversa
-            </a>
-            <Link href="/projetos">
-              <a className="secondary">Ver projetos <FiArrowRight /></a>
-            </Link>
-          </Actions>
-          <p className="microcopy">Conversa inicial sem compromisso pelo WhatsApp.</p>
-        </div>
-      </HeroCard>
-
-      <About>
-        <div>
-          <span className="section-label">Como posso ajudar</span>
-          <h2>Tecnologia como meio.<br /><strong>Resultado como objetivo.</strong></h2>
-        </div>
-        <p>
-          Experiência em projetos de grande escala, incluindo <b>Porto Seguro</b> e
-          <b> BB Seguros</b>. Uno visão de negócio e profundidade técnica para tirar
-          ideias do papel e destravar operações.
+        <p className="eyebrow">Engenheiro de Software</p>
+        <h1>Daniel Nery</h1>
+        <p className="bio">
+          Soluções em software, Odoo ERP, automação e arquitetura para transformar
+          desafios de negócio em resultados.
         </p>
-      </About>
+        <div className="status"><i /> Disponível para novos projetos</div>
+      </Profile>
 
-      <Services>
-        {services.map(service => (
-          <ServiceCard key={service.title}>
-            <span className="icon">{service.icon}</span>
-            <h3>{service.title}</h3>
-            <p>{service.text}</p>
-          </ServiceCard>
-        ))}
-      </Services>
+      <LinkList aria-label="Serviços e links">
+        <a
+          className="featured"
+          href={whatsappLink('Olá, Daniel! Vi seu portfólio e gostaria de agendar uma conversa sobre consultoria.')}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FiMessageCircle />
+          <span><b>Agendar consultoria</b><small>Fale comigo pelo WhatsApp</small></span>
+          <FiArrowUpRight />
+        </a>
 
-      <Skills>
-        <span><FiShield /> Odoo ERP</span>
-        <span><FiCode /> Python & microsserviços</span>
-        <span><FiZap /> Eventos & automação</span>
-        <span><FiCpu /> Dados, bots & testes</span>
-      </Skills>
+        <a
+          href={whatsappLink('Olá, Daniel! Gostaria de conversar sobre um projeto de desenvolvimento de software.')}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FiCode />
+          <span><b>Desenvolvimento de software</b><small>Sistemas, APIs, integrações e automações</small></span>
+          <FiArrowUpRight />
+        </a>
+
+        <a
+          href={whatsappLink('Olá, Daniel! Gostaria de saber mais sobre seus treinamentos.')}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FiBookOpen />
+          <span><b>Treinamentos</b><small>Conteúdo prático para times e empresas</small></span>
+          <FiArrowUpRight />
+        </a>
+
+        <a
+          href={whatsappLink('Olá, Daniel! Gostaria de convidá-lo para uma palestra.')}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FiMic />
+          <span><b>Palestras</b><small>Tecnologia, engenharia e carreira</small></span>
+          <FiArrowUpRight />
+        </a>
+
+        <Link href="/projetos">
+          <a>
+            <FiFolder />
+            <span><b>Conheça meus projetos</b><small>Veja alguns trabalhos e soluções</small></span>
+            <FiArrowUpRight />
+          </a>
+        </Link>
+      </LinkList>
+
+      <footer>
+        <span>&lt;</span> mais de 6 anos construindo tecnologia <span>/&gt;</span>
+      </footer>
     </Container>
   );
 }

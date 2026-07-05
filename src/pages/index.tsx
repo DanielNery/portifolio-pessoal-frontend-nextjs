@@ -1,8 +1,4 @@
-import Footer from "../components/Footer";
-import FormContato from "../components/FormContato";
-import Header from "../components/Header";
 import HomeHero from "../components/HomeHero";
-import Projetos from "../components/Projetos";
 import Loading from '../components/Loading';
 import Head from 'next/head';
 
@@ -17,7 +13,6 @@ export default function Home() {
 
   const [data, setData] = useState<any>(null);  
   const router = useRouter();
-  const [utmValue, setUtmValue] = useState('');
 
   useEffect(() => {
     if (!router.isReady) return;
@@ -31,7 +26,6 @@ export default function Home() {
       .filter(Boolean)
       .join(' | ');
 
-    setUtmValue(tracking);
     fetchData(tracking);
     // eslint-disable-next-line
   }, [router.isReady]);
@@ -70,13 +64,7 @@ export default function Home() {
     </Head>
     { data ? (
         <HomeContainer>
-          <Header />
-          <main className="container"> 
-            <HomeHero />
-            <Projetos />
-            <FormContato utm={utmValue} />
-          </main>
-          <Footer />
+          <HomeHero />
       </HomeContainer>
       ) : <Loading />
     }</>
