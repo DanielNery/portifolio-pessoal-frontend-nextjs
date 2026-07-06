@@ -6,7 +6,6 @@ const Loading = () => {
       <LoadingSpinner />
       <LoadingText>
         Pegue um cafézinho, já vai carregar...
-        <span>Estou usando uma instância gratuita</span>
       </LoadingText>
     </LoadingContainer>
   );

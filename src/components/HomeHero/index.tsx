@@ -3,6 +3,7 @@ import {
   FiArrowUpRight,
   FiBookOpen,
   FiCode,
+  FiCpu,
   FiFolder,
   FiMessageCircle,
   FiMic
@@ -26,8 +27,8 @@ function HomeHero() {
         <p className="eyebrow">Engenheiro de Software</p>
         <h1>Daniel Nery</h1>
         <p className="bio">
-          Soluções em software, Odoo ERP, automação e arquitetura para transformar
-          desafios de negócio em resultados.
+          Especialista em Agentes de IA, MCPs, software, Odoo ERP e automação para
+          transformar desafios de negócio em resultados.
         </p>
         <div className="status"><i /> Disponível para novos projetos</div>
       </Profile>
@@ -41,6 +42,17 @@ function HomeHero() {
         >
           <FiMessageCircle />
           <span><b>Agendar consultoria</b><small>Fale comigo pelo WhatsApp</small></span>
+          <FiArrowUpRight />
+        </a>
+
+        <a
+          className="ai"
+          href={whatsappLink('Olá, Daniel! Gostaria de conversar sobre a criação de Agentes de IA e MCPs para minha empresa.')}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FiCpu />
+          <span><b>Agentes de IA & MCPs</b><small>Agentes inteligentes e integrações com seus sistemas</small></span>
           <FiArrowUpRight />
         </a>
 

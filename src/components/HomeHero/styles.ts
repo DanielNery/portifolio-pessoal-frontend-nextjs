@@ -145,6 +145,16 @@ export const LinkList = styled.nav`
     color: ${({ theme }) => theme.background};
   }
 
+  > a.ai {
+    border-color: ${({ theme }) => theme.secondary};
+    background: linear-gradient(110deg, rgba(122, 199, 227, .14), rgba(14, 231, 183, .08));
+    box-shadow: 0 0 24px rgba(122, 199, 227, .08);
+  }
+
+  > a.ai b {
+    color: ${({ theme }) => theme.primary};
+  }
+
   > a > svg:first-child { font-size: 1.25rem; }
   > a > svg:last-child { justify-self: end; }
   span { min-width: 0; display: flex; flex-direction: column; gap: .2rem; }
