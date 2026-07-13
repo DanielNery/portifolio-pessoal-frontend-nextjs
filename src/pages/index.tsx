@@ -1,17 +1,15 @@
 import HomeHero from "../components/HomeHero";
-import Loading from '../components/Loading';
 import Head from 'next/head';
 
 import axios from 'axios';
 
 import { useRouter } from 'next/router';
 import { HomeContainer } from '../styles/HomeStyles';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 
 
 export default function Home() {
 
-  const [data, setData] = useState<any>(null);  
   const router = useRouter();
 
   useEffect(() => {
@@ -26,12 +24,12 @@ export default function Home() {
       .filter(Boolean)
       .join(' | ');
 
-    fetchData(tracking);
+    fireAndForget(tracking);
     // eslint-disable-next-line
   }, [router.isReady]);
 
-  const fetchData = async (tracking: string) => {
-    let payload: any = {
+  const fireAndForget = (tracking: string) => {
+    const payload: any = {
       name: '',
       email: '',
       message: 'Acesso registrado no portifólio!',
@@ -40,18 +38,8 @@ export default function Home() {
       payload.utm = tracking;
     }
 
-    try {
-      const response = await axios.post('https://danielpontesnery.onrender.com/api/v1/health', payload);
-      setData(response?.data || {});
-    } catch (error) {
-      setData({});
-    }
-
-    try {
-      await axios.post(`https://danielpontesnery.onrender.com/api/v1/contato/danielpontesnery@gmail.com`, payload);
-    } catch (error) {
-      // A indisponibilidade da notificação não impede o visitante de acessar o site.
-    }
+    axios.post('https://danielpontesnery.onrender.com/api/v1/health', payload).catch(() => {});
+    axios.post(`https://danielpontesnery.onrender.com/api/v1/contato/danielpontesnery@gmail.com`, payload).catch(() => {});
   };
 
 
@@ -62,11 +50,9 @@ export default function Home() {
       <meta name="description" content="Consultoria, desenvolvimento, automação, treinamentos e palestras com Daniel Nery, engenheiro de software." />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Head>
-    { data ? (
-        <HomeContainer>
-          <HomeHero />
-      </HomeContainer>
-      ) : <Loading />
-    }</>
+    <HomeContainer>
+      <HomeHero />
+    </HomeContainer>
+    </>
   );
 }
