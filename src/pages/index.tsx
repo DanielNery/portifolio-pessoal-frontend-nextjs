@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import { HomeContainer } from '../styles/HomeStyles';
 import { useEffect } from 'react';
 
+const BACKEND_URL = 'https://2qko2n03od.execute-api.us-east-1.amazonaws.com';
 
 export default function Home() {
 
@@ -14,33 +15,29 @@ export default function Home() {
 
   useEffect(() => {
     if (!router.isReady) return;
-    const trackedParams = ['utm', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
-    const tracking = trackedParams
-      .map(key => {
-        const value = router.query[key];
-        const normalized = Array.isArray(value) ? value[0] : value;
-        return normalized ? `${key}=${normalized}` : '';
-      })
-      .filter(Boolean)
-      .join(' | ');
 
-    fireAndForget(tracking);
+    const utmKeys = ['utm', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+    const getParam = (key: string) => {
+      const value = router.query[key];
+      return Array.isArray(value) ? value[0] : (value ?? '');
+    };
+
+    const payload = {
+      utm:          utmKeys.filter(k => k !== 'utm').map(k => { const v = getParam(k); return v ? `${k}=${v}` : ''; }).filter(Boolean).join(' | '),
+      utm_source:   getParam('utm_source'),
+      utm_medium:   getParam('utm_medium'),
+      utm_campaign: getParam('utm_campaign'),
+      utm_content:  getParam('utm_content'),
+      utm_term:     getParam('utm_term'),
+      user_agent:   navigator.userAgent,
+      referrer:     document.referrer,
+      language:     navigator.language,
+      screen:       `${screen.width}x${screen.height}`,
+    };
+
+    axios.post(`${BACKEND_URL}/api/v1/tracking`, payload).catch(() => {});
     // eslint-disable-next-line
   }, [router.isReady]);
-
-  const fireAndForget = (tracking: string) => {
-    const payload: any = {
-      name: '',
-      email: '',
-      message: 'Acesso registrado no portifólio!',
-    };
-    if (tracking) {
-      payload.utm = tracking;
-    }
-
-    axios.post('https://2qko2n03od.execute-api.us-east-1.amazonaws.com/api/v1/health', payload).catch(() => {});
-    axios.post(`https://2qko2n03od.execute-api.us-east-1.amazonaws.com/api/v1/contato/danielpontesnery@gmail.com`, payload).catch(() => {});
-  };
 
 
   return (
