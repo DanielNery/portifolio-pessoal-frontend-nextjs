@@ -26,7 +26,7 @@ export default function Form({ utm }: { utm?: string }){
     
         try {
         
-          const response = await axios.post(`https://danielpontesnery.onrender.com/api/v1/contato/danielpontesnery@gmail.com`, formData);
+          const response = await axios.post(`https://2qko2n03od.execute-api.us-east-1.amazonaws.com/api/v1/contato/danielpontesnery@gmail.com`, formData);
           setData(response.data);
           toast.success("Mensagem enviada com sucesso, em até 48 horas retornaremos o contato!")
           console.log('Form submitted:', response.data);

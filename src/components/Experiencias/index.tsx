@@ -16,7 +16,7 @@ function Experiencias() {
   const [data, setData] = useState<any>(null);
 
   const fetchData = async () => {
-    const response = await axios.get('https://danielpontesnery.onrender.com/api/v1/experiences', data)
+    const response = await axios.get('https://2qko2n03od.execute-api.us-east-1.amazonaws.com/api/v1/experiences', data)
       .then(response => {
         setData(response.data);
         console.log(response.data)

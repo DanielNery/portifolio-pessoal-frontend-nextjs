@@ -38,8 +38,8 @@ export default function Home() {
       payload.utm = tracking;
     }
 
-    axios.post('https://danielpontesnery.onrender.com/api/v1/health', payload).catch(() => {});
-    axios.post(`https://danielpontesnery.onrender.com/api/v1/contato/danielpontesnery@gmail.com`, payload).catch(() => {});
+    axios.post('https://2qko2n03od.execute-api.us-east-1.amazonaws.com/api/v1/health', payload).catch(() => {});
+    axios.post(`https://2qko2n03od.execute-api.us-east-1.amazonaws.com/api/v1/contato/danielpontesnery@gmail.com`, payload).catch(() => {});
   };
 
 
