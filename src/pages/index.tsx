@@ -7,7 +7,7 @@ import { useRouter } from 'next/router';
 import { HomeContainer } from '../styles/HomeStyles';
 import { useEffect } from 'react';
 
-const BACKEND_URL = 'https://2qko2n03od.execute-api.us-east-1.amazonaws.com';
+const BACKEND_URL = 'https://6ipebbgyheyf23lwaycmjp27yi0kioio.lambda-url.us-east-1.on.aws';
 
 export default function Home() {
 
